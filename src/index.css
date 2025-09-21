@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@font-face {
+  font-family: "Dana";
+  src: url("./assets/fonts/Dana/woff2/DanaFaNum-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Dana Medium";
+  src: url("./assets/fonts/Dana/woff2/DanaFaNum-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Dana Bold";
+  src: url("./assets/fonts/Dana/woff2/DanaFaNum-DemiBold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Morabba Bold";
+  src: url("./assets/fonts/Morabba/woff2/Morabba-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Morabba Light";
+  src: url("./assets/fonts/Morabba/woff2/Morabba-Light.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Morabba Medium";
+  src: url("./assets/fonts/Morabba/woff2/Morabba-Medium.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@theme {
+  --color-brown-100: #ECEOD1;
+  --color-brown-300: rgba(254, 215, 170, 1);
+  --color-brown-200: rgba(250, 184, 115, 1);
+  --color-brown-600: #967259;
+  --color-brown-900: #634832;
+  --color-hoverMeno: rgba(253, 186, 116, 1);
+  --color-logoColor: #78350f;
+
+  --shadow-normal: 0px 1px 10px rgba(0, 0, 0, 0.05);
+
+  --radius-4xl: 2rem;
+
+  --font-Dana: "Dana", sans-serif;
+  --font-DanaMedium: "Dana Medium";
+  --font-DanaDemiBold: "Dana Bold";
+
+  --font-MorabbaLight: "Morabba Light";
+  --font-MorabbaBold: "Morabba Bold";
+  --font-MorabbaMedium: "Morabba Medium";
+
+  --tracking-tightest: -0.065em;
+
+  --animate-tost: tost 4s ease-in-out infinite;
+  --breakpoint-xs: 480px;
+
+  --breakpoint-tm: 777px;
+  --breakpoint-ml: 1096px;
+  --breakpoint-ls: 1045px;
+}
+@keyframes tost {
+  0%,
+  100% {
+    transform: translateX(-400px);
+    -webkit-transform: translateX(-400px);
+    -moz-transform: translateX(-400px);
+    -ms-transform: translateX(-400px);
+    -o-transform: translateX(-400px);
+  }
+  50% {
+    transform: translateX(40px);
+    -webkit-transform: translateX(40px);
+    -moz-transform: translateX(40px);
+    -ms-transform: translateX(40px);
+    -o-transform: translateX(40px);
+  }
+}
+
+html,
+body {
+  overflow-x: clip;
+  scrollbar-width: 0;
+}
+.light {
+  background: linear-gradient(
+    to bottom right,
+    rgba(219, 234, 254, 0.331),
+    rgba(233, 213, 255, 0.417)
+  );
+}
+.dark {
+  background: #272727;
+}
+
+.sticky-tabs {
+  position: sticky;
+  top: 4rem; /* فاصله از بالای صفحه یا هدر */
+  z-index: 40;
+  /* background-color: rgba(255,255,255,0.8); */
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #e5e7eb;
+}
